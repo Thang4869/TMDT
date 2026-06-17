@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Frontend/CSS/TrangChuAdmin.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <div class="logo">Admin Dashboard</div>
+            <ul class="menu">
+                <li><a href="/Frontend/HTML/TrangChuAdmin.html" class="active" id="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLySanPham.html" id="product"><i class="fas fa-cogs"></i> Quản lý sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyLoaiSanPham.html" id="categories"><i class="fas fa-th-large"></i> Quản lý loại sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyThuongHieu.html" id="brands"><i class="fas fa-building"></i> Quản lý thương hiệu</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyNguoiDung.html" id="users"><i class="fas fa-users"></i> Quản lý người dùng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDonHang.html" id="orders"><i class="fas fa-box"></i> Quản lý đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyChiTietDonHang.html" id="orderDetails"><i class="fas fa-file-invoice"></i> Quản lý chi tiết đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDanhGia.html" id="reviews"><i class="fas fa-star"></i> Quản lý đánh giá</a></li>
+            </ul>
+        </div>
+        <div class="main-content">
+            <header>
+                <div class="header-title">Dashboard</div>
+                <div class="user-menu">
+                    <span>Admin</span>
+                    <button class="logout-btn">Logout</button>
+                </div>
+            </header>
+            <div class="content" id="content-area">
+                <h2>Welcome to the Admin Dashboard</h2>
+                <div class="dashboard-content">
+                    <h2>Thống kê doanh thu</h2>
+                    <div class="date-filter">
+                        <label for="startDate">Từ ngày:</label>
+                        <input type="datetime-local" id="startDate" name="startDate">
+                        <label for="endDate">Đến ngày:</label>
+                        <input type="datetime-local" id="endDate" name="endDate">
+                        <button onclick="fetchRevenueData()">Lọc</button>
+                    </div>
+                    <h3>Danh sách doanh thu</h3>
+
+
+                    <div class="table-container">
+                        <table id="revenueTable">
+                            <thead>
+                                <tr>
+                                    <th>Tháng</th>
+                                    <th>Doanh thu (VND)</th>
+                                    <th>Số lượng đơn hàng</th>
+                                    <th>Hành động</th>
+                                </tr>
+                            </thead>
+                            <tbody id="revenueTableBody"></tbody>
+                        </table>
+                    </div>
+                    <!-- Các phần khác của trang -->
+                    <div class="chart-container">
+                        <canvas id="barChart" style="width: 100%; height: 400px;"></canvas>
+                        <canvas id="pieChart" style="width: 100%; height: 400px;"></canvas>
+                        <canvas id="lineChart" style="width: 100%; height: 400px;"></canvas> <!-- Thêm canvas cho biểu đồ đường -->
+                    </div>
+                    <!-- Form popup -->
+                    <div id="orderDetailsModal" class="modal" style="display: none;">
+                        <div class="modal-content">
+                            <span class="close">&times;</span>
+                            <h2>Chi tiết đơn hàng</h2>
+                            <table id="orderDetailsTable">
+                                <thead>
+                                    <tr>
+                                        <th>STT</th>
+                                        <th>Tên sản phẩm</th>
+                                        <th>Số tiền</th>
+                                        <th>Số lượng</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="orderDetailsBody"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/Frontend/JS/TrangChuAdmin.js"></script>
+</body>
+</html>

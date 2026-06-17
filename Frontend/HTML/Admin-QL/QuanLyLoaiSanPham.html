@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Loại Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/Frontend/CSS/Admin-QL/QuanLyLoaiSanPham.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Admin Dashboard</div>
+            <ul class="menu">
+                <li><a href="/Frontend/HTML/TrangChuAdmin.html" id="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLySanPham.html" id="product"><i class="fas fa-cogs"></i>Quản lý sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyLoaiSanPham.html" class="active" id="categories"><i class="fas fa-th-large"></i> Quản lý loại sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyThuongHieu.html" id="brands"><i class="fas fa-building"></i> Quản lý thương hiệu</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyNguoiDung.html" id="users"><i class="fas fa-users"></i> Quản lý người dùng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDonHang.html" id="orders"><i class="fas fa-box"></i> Quản lý đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyChiTietDonHang.html" id="orderDetails"><i class="fas fa-file-invoice"></i> Quản lý chi tiết đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDanhGia.html" id="reviews"><i class="fas fa-star"></i> Quản lý đánh giá</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+            <div class="header-title">Quản lý Loại Sản Phẩm</div>
+            <div class="user-menu">
+                <span>Admin</span>
+                <button>Logout</button>
+            </div>
+            </header>
+            <!-- Thêm loại sản phẩm -->
+            <div id="add-category" class="form-container">
+                <h3>Thêm Loại Sản Phẩm</h3>
+                <form id="add-category-form">
+                    <div class="form-group">
+                        <label for="category-code">Mã Loại:</label>
+                        <input type="text" id="category-code" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="category-name">Tên Loại Sản Phẩm:</label>
+                        <input type="text" id="category-name" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Thêm loại sản phẩm</button>
+                </form>
+            </div>
+            <!-- Danh sách loại sản phẩm -->
+            <div id="category-list" class="table-container">
+                <h3>Danh Sách Loại Sản Phẩm</h3>
+                <table>
+                    <tr>
+                        <th>Mã Loại</th>
+                        <th>Tên Loại Sản Phẩm</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                    <tbody id="category-table-body">
+                        <!-- Dữ liệu loại sản phẩm -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script src="/Frontend/JS/Admin-QL/QuanLyLoaiSanPham.js"></script>
+</body>
+</html>

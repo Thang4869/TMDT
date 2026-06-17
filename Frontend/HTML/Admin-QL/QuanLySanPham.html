@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Sản Phẩm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/Frontend/CSS/Admin-QL/QuanLySanPham.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Admin Dashboard</div>
+            <ul class="menu">
+                <li><a href="/Frontend/HTML/TrangChuAdmin.html" id="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLySanPham.html" class="active" id="product"><i class="fas fa-cogs"></i>Quản lý sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyLoaiSanPham.html" id="categories"><i class="fas fa-th-large"></i> Quản lý loại sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyThuongHieu.html" id="brands"><i class="fas fa-building"></i> Quản lý thương hiệu</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyNguoiDung.html" id="users"><i class="fas fa-users"></i> Quản lý người dùng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDonHang.html" id="orders"><i class="fas fa-box"></i> Quản lý đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyChiTietDonHang.html" id="orderDetails"><i class="fas fa-file-invoice"></i> Quản lý chi tiết đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDanhGia.html" id="reviews"><i class="fas fa-star"></i> Quản lý đánh giá</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <div class="header-title">Quản lý Sản Phẩm</div>
+                <div class="user-menu">
+                    <span>Admin</span>
+                    <button>Logout</button>
+                </div>
+            </header>
+            <!-- Thêm sản phẩm -->
+            <div id="add-product" class="form-container">
+                <form id="add-product-form">
+                    <div class="form-group">
+                        <label for="product-code">Mã Sản Phẩm:</label>
+                        <input type="text" id="product-code" required>
+                        <label for="product-category">Mã Loại:</label>
+                        <select id="product-category" required>
+                        </select>
+                        <label for="product-brand">Mã Thương Hiệu:</label>
+                        <select id="product-brand" required>
+                        </select>
+                        <label for="product-quantity">Số lượng:</label>
+                        <input type="number" id="product-quantity" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-name">Tên sản phẩm:</label>
+                        <input type="text" id="product-name" required>
+                        <label for="product-price">Giá:</label>
+                        <input type="number" id="product-price" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="product-description">Mô tả:</label>
+                        <textarea id="product-description"></textarea>
+                        <label for="product-image">Hình ảnh:</label>
+                        <input type="file" id="product-image" accept="image/*">
+                        <img id="preview-image" src="" alt="Xem trước ảnh" style="display: none; width: 100px; margin-top: 10px;">
+                    </div>
+
+                    <script>
+                        document.getElementById('product-image').addEventListener('change', function(event) {
+                            const reader = new FileReader();
+                            reader.onload = function() {
+                                document.getElementById('preview-image').src = reader.result;
+                                document.getElementById('preview-image').style.display = 'block';
+                            }
+                            reader.readAsDataURL(event.target.files[0]);
+                        });
+                    </script>
+                    
+                    <button type="submit" class="btn-submit">Thêm sản phẩm</button>
+                </form>
+            </div>
+            <h3>Danh Sách Sản Phẩm</h3>
+            <div id="pagination-container">
+                <button id="prev-page">Trang trước</button>
+                <div id="page-numbers"></div>
+                <button id="next-page">Trang sau</button>
+            </div>
+            <!-- Danh sách sản phẩm -->
+            <div id="product-list" class="table-container">
+                <table>
+                    <tr>
+                        <th>Mã Sản Phẩm</th>
+                        <th>Mã Loại</th>
+                        <th>Mã Thương Hiệu</th>
+                        <th>Tên Sản Phẩm</th>
+                        <th>Giá</th>
+                        <th>Số Lượng</th>
+                        <th>Mô Tả</th>
+                        <th>Hình ảnh</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                    <tbody id="product-table-body">
+                        <!-- Dữ liểu sản phẩm -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script src="/Frontend/JS/Admin-QL/QuanLySanPham.js"></script>
+</body>
+</html>

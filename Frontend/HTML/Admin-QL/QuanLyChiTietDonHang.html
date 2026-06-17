@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Chi Tiết Đơn Hàng</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="/Frontend/CSS/Admin-QL/QuanLyChiTietDonHang.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <div class="logo">Admin Dashboard</div>
+            <ul class="menu">
+                <li><a href="/Frontend/HTML/TrangChuAdmin.html" id="dashboard"><i class="fas fa-tachometer-alt"></i>Dashboard</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLySanPham.html" id="product"><i class="fas fa-cogs"></i>Quản lý sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyLoaiSanPham.html" id="categories"><i class="fas fa-th-large"></i>Quản lý loại sản phẩm</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyThuongHieu.html" id="brands"><i class="fas fa-building"></i>Quản lý thương hiệu</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyNguoiDung.html" id="users"><i class="fas fa-users"></i>Quản lý người dùng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDonHang.html" id="orders"><i class="fas fa-box"></i>Quản lý đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyChiTietDonHang.html" class="active" id="orderDetails"><i class="fas fa-file-invoice"></i>Quản lý chi tiết đơn hàng</a></li>
+                <li><a href="/Frontend/HTML/Admin-QL/QuanLyDanhGia.html" id="reviews"><i class="fas fa-star"></i>Quản lý đánh giá</a></li>
+            </ul>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <header>
+                <div class="header-title">Quản lý Chi Tiết Đơn Hàng</div>
+                <div class="user-menu">
+                    <span>Admin</span>
+                    <button>Logout</button>
+                </div>
+            </header>
+            <!-- Danh sách chi tiết đơn hàng -->
+            <div id="order-details-list" class="table-container">
+                <h3>Danh Sách Chi Tiết Đơn Hàng</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã CTDH</th>
+                            <th>Mã Đơn Hàng</th>
+                            <th>Mã Sản Phẩm</th>
+                            <th>Số Lượng</th>
+                        </tr>
+                    </thead>
+                    <tbody id="order-details-table">
+                        <!-- Dữ liệu chi tiết đơn hàng -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<script src="/Frontend/JS/Admin-QL/QuanLyChiTietDonHang.js"></script>
+</body>
+</html>

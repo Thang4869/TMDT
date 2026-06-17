@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ Hàng - Store Computer</title>
+    <link rel="stylesheet" href="/Frontend/CSS/TrangChu.css">
+    <link rel="stylesheet" href="/Frontend/CSS/GioHang.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🖥️ Store Computer</div>
+        <div class="location">📍 TP.Hồ Chí Minh ▼</div>
+        <div class="search-box">
+            <input type="text" id="searchBox" name="searchBox" placeholder="🔍 Tìm kiếm sản phẩm...">
+        </div>
+        <div class="cart">
+            <a href="GioHang.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+        <div class="user">👤 Trần Thị B ▼</div>
+    </header>
+    <div class="container">
+        <h2>🛒 Giỏ hàng</h2>
+        <a href="/Frontend/HTML/TrangChu.html" class="back-button">← Quay lại trang chủ</a>
+        <table>
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="chonTatCa" name="chonTatCa"></th>
+                    <th>Sản Phẩm</th>
+                    <th>Đơn Giá</th>
+                    <th>Số Lượng</th>
+                    <th>Thành Tiền</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="danhSachGioHang"></tbody>
+        </table>
+        <div class="cart-summary">
+            <p>Tổng tạm tính: <span id="tongTamTinh">0</span> VND</p>
+            <p>Thành tiền: <span id="tongTien">0</span> VND (Đã bao gồm VAT)</p>
+            <button id="muaHang">THANH TOÁN</button>
+        </div>
+    </div>
+    <!-- Modal thanh toán khách vãng lai -->
+    <div id="checkoutModal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 10000;">
+        <div style="background: #fff; width: 400px; margin: 100px auto; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+            <h2 style="text-align: center; color: #333;">Thanh toán khách vãng lai</h2>
+            <form id="guestCheckoutForm">
+                <input type="text" id="guestName" placeholder="Họ và tên" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;" required>
+                <input type="text" id="guestPhone" placeholder="Số điện thoại" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;" required>
+                <input type="email" id="guestEmail" placeholder="Email" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;" required>
+                <input type="text" id="guestAddress" placeholder="Địa chỉ" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px;" required>
+                <button type="submit" style="background: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; width: 100%; cursor: pointer;">Xác nhận thanh toán</button>
+            </form>
+            <button onclick="document.getElementById('checkoutModal').style.display='none'" style="background: #e74c3c; color: #fff; padding: 10px; margin-top: 10px; border: none; border-radius: 5px; width: 100%; cursor: pointer;">Hủy</button>
+        </div>
+    </div>
+    <footer>
+        <p>© 2024 Store Computer. Mọi quyền được bảo lưu.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    <script src="/Frontend/JS/TrangChu.js"></script>
+    <script src="/Frontend/JS/GioHang.js"></script>
+</body>
+</html>

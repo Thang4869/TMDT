@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechStore - Mua Sắm Công Nghệ</title>
+    <link rel="stylesheet" href="/Frontend/CSS/TrangChu.css">
+</head>
+<body>
+    <header>
+        <div class="logo">🖥️ Store Computer</div>
+        <div class="location">📍 TP.Hồ Chí Minh ▼</div>
+        <div class="search-box">
+            <input type="text" id="searchBox" placeholder="🔍 Tìm kiếm sản phẩm...">
+        </div>
+        <div class="cart">
+            <a href="/Frontend/HTML/GioHang.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+        <div class="notification-icon" id="notificationIcon">
+            🔔 <span id="notification-count">0</span>
+            <div class="notification-dropdown" id="notificationDropdown"></div>
+        </div>
+        <div class="order-management">
+            <a href="/Frontend/HTML/QuanLyDonHang.html">📋 Đơn hàng</a>
+        </div>
+        <div class="user">Đăng nhập</div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#">Sản phẩm</a></li>
+            <li class="brand-item">
+                <a href="#">Thương hiệu ▼</a>
+                <div class="brand-form" id="brandForm"></div> <!-- Form hiển thị thương hiệu -->
+            </li>
+            <li class="product-type">
+                <a href="#">Phân loại sản phẩm ▼</a>
+                <div class="product-type-form" id="producttypeform"></div> <!-- Form hiển thị loại sản phẩm -->
+            </li>
+            <li><a href="#">Khuyến mãi</a></li>
+            <li><a href="#">Hỗ trợ</a></li>
+        </ul>
+    </nav>
+
+    <section class="slider">
+        <div class="slide active" style="background-image: url('/Frontend/IMAGE/slider1.png');">
+            <div class="slider-text">Sản phẩm mới nhất</div>
+        </div>
+        <div class="slide" style="background-image: url('/Frontend/IMAGE/slider2.png');">
+            <div class="slider-text">Laptop Gaming Mạnh Mẽ</div>
+        </div>
+        <div class="slide" style="background-image: url('/Frontend/IMAGE/slider3.png');">
+            <div class="slider-text">PC Văn Phòng Tiết Kiệm</div>
+        </div>
+    </section>
+
+    <section class="brand-slider-container">
+        <button class="slider-btn prev-btn" onclick="prevBrandSlide()">❮</button>
+        <div class="brand-slider" id="brandSlider">
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider1.png" alt="Brand 1"></div>
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider2.png" alt="Brand 2"></div>
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider3.png" alt="Brand 3"></div>
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider1.png" alt="Brand 4"></div>
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider2.png" alt="Brand 5"></div>
+            <div class="brand-slide"><img src="/Frontend/IMAGE/slider3.png" alt="Brand 6"></div>
+        </div>
+        <button class="slider-btn next-btn" onclick="nextBrandSlide()">❯</button>
+    </section>
+
+    <section class="flash-sale-container">
+        <h2>Flash Sale đã kết thúc</h2>
+        <div class="flash-sale-items-container">
+            <div class="flash-sale-item">
+                <img src="/Frontend/IMAGE/default.jpg" alt="Product 1">
+                <div class="product-info">
+                    <h3>The Face Shop</h3>
+                    <p>Combo 40 Mặt Nạ Giấy Cung Cấp Ẩm Tối Ưu</p>
+                    <div class="price">
+                        <span class="old-price">1,500,000₫</span>
+                        <span class="new-price">585,000₫</span>
+                    </div>
+                    <p class="discount">-63%</p>
+                    <p class="remaining">Còn 13 sản phẩm</p>
+                </div>
+            </div>
+            <div class="flash-sale-item">
+                <img src="/Frontend/IMAGE/default.jpg" alt="Product 2">
+                <div class="product-info">
+                    <h3>The Face Shop</h3>
+                    <p>Combo 21 Mặt Nạ Dưỡng Ẩm Cấp Nước Cơ Bản</p>
+                    <div class="price">
+                        <span class="old-price">819,000₫</span>
+                        <span class="new-price">351,000₫</span>
+                    </div>
+                    <p class="discount">-57%</p>
+                    <p class="remaining">Còn 11 sản phẩm</p>
+                </div>
+            </div>
+            <div class="flash-sale-item">
+                <img src="/Frontend/IMAGE/default.jpg" alt="Product 3">
+                <div class="product-info">
+                    <h3>The Face Shop</h3>
+                    <p>Sữa Rửa Mặt Tạo Bọt Dành Cho Da Dầu Hỗn Hợp</p>
+                    <div class="price">
+                        <span class="old-price">1,100,000₫</span>
+                        <span class="new-price">199,000₫</span>
+                    </div>
+                    <p class="discount">-81%</p>
+                    <p class="remaining">Còn 12 sản phẩm</p>
+                </div>
+            </div>
+            <div class="flash-sale-item">
+                <img src="/Frontend/IMAGE/default.jpg" alt="Product 4">
+                <div class="product-info">
+                    <h3>The Face Shop</h3>
+                    <p>Bông Tẩy Trang 100% Cotton Daily Beauty Tools</p>
+                    <div class="price">
+                        <span class="old-price">45,000₫</span>
+                        <span class="new-price">38,250₫</span>
+                    </div>
+                    <p class="discount">-15%</p>
+                    <p class="remaining">Còn 10 sản phẩm</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="product-list" id="productList"></section>
+
+    <footer>
+        <p>© 2024 Store Computer. Mọi quyền được bảo lưu.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="/Frontend/JS/TrangChu.js"></script>
+</body>
+</html>

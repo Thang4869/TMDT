@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Tiết Sản Phẩm</title>
+    <link rel="stylesheet" href="/Frontend/CSS/TrangChu.css">
+    <link rel="stylesheet" href="/Frontend/CSS/ChiTietSanPham.css">
+</head>
+<body>
+    <!-- Header từ trang chủ -->
+    <header>
+        <div class="logo">🖥️ Store Computer</div>
+        <div class="location">📍 TP.Hồ Chí Minh ▼</div>
+        <div class="search-box">
+            <input type="text" id="searchBox" placeholder="🔍 Tìm kiếm sản phẩm...">
+        </div>
+        <div class="cart">
+            <a href="/Frontend/HTML/GioHang.html">🛒 <span id="cart-count">0</span></a>
+        </div>
+        <div class="user">👤 Trần Thị B ▼</div>
+    </header>
+    <div class="container">
+        <h2>Chi tiết sản phẩm</h2>
+        <a href="TrangChu.html">← Quay lại trang chủ</a>
+
+        <!-- Chi tiết sản phẩm -->
+        <section id="productDetail">
+            <h2>Đang tải sản phẩm...</h2>
+        </section>
+        
+        <!-- Đánh giá sản phẩm -->
+        <div id="averageRating"><p>Đang tải đánh giá...</p></div>
+        <h3>Đánh Giá Từ Người Dùng</h3>
+        <div id="reviewList">
+            <p>Chưa có đánh giá nào.</p>
+        </div>
+        <button id="loadMore" style="display: none;">Xem thêm đánh giá</button>
+    </div>
+    <!-- Footer từ trang chủ -->
+    <footer>
+        <p>© 2024 Store Computer. Mọi quyền được bảo lưu.</p>
+        <div class="social-icons">
+            <a href="#">Facebook</a>
+            <a href="#">Instagram</a>
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+    
+    <script src="/Frontend/JS/ChiTietSanPham.js"></script>
+</body>
+</html>
