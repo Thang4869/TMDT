@@ -9,14 +9,16 @@
 <body>
     <div class="form-container">
         <h2>Đăng Ký</h2>
-        <input type="text" id="name" placeholder="Họ và tên">
-        <input type="text" id="phone" placeholder="Số điện thoại">
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Mật khẩu">
-        <button onclick="register()">Đăng Ký</button>
+        <form id="registerForm">
+            <input type="text" id="name" placeholder="Họ và tên" required>
+            <input type="text" id="phone" placeholder="Số điện thoại" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng Ký</button>
+        </form>
         <p>Đã có tài khoản rồi? <a href="DangNhap.html">Đăng nhập</a></p>
         <p id="message"></p>
     </div>
-    <script src="/Frontend/JS/Auth.js"></script>
+    <script type="module" src="/Frontend/JS/authService.js"></script>
 </body>
 </html>

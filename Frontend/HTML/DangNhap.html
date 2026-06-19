@@ -9,12 +9,15 @@
 <body>
     <div class="form-container">
         <h2>Đăng Nhập</h2>
-        <input type="email" id="email" placeholder="Email">
-        <input type="password" id="password" placeholder="Mật khẩu">
-        <button onclick="login()">Đăng Nhập</button>
+        <form id="loginForm">
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <button type="submit">Đăng Nhập</button>
+        </form>
         <p>Vẫn chưa có tài khoản? <a href="DangKy.html">Đăng ký</a></p>
         <p id="message"></p>
     </div>
-    <script src="/Frontend/JS/Auth.js"></script>
+    <!-- Module JS mới -->
+    <script type="module" src="/Frontend/JS/authService.js"></script>
 </body>
 </html>
