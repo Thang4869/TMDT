@@ -29,3 +29,14 @@ export function validateLoginInput(email, password) {
   if (!email || !password) return 'Vui lòng điền email và mật khẩu';
   return null;
 }
+
+export function createElement(tag, attributes = {}, textContent = '') {
+  const el = document.createElement(tag);
+  Object.entries(attributes).forEach(([key, value]) => {
+    if (key === 'className') el.className = value;
+    else if (key === 'dataset') Object.assign(el.dataset, value);
+    else el.setAttribute(key, value);
+  });
+  if (textContent) el.textContent = textContent;
+  return el;
+}
