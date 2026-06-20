@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/Frontend/CSS/ChiTietSanPham.css">
 </head>
 <body>
-    <!-- Header từ trang chủ -->
     <header>
         <div class="logo">🖥️ Store Computer</div>
         <div class="location">📍 TP.Hồ Chí Minh ▼</div>
@@ -20,24 +19,23 @@
         </div>
         <div class="user">👤 Trần Thị B ▼</div>
     </header>
+
     <div class="container">
         <h2>Chi tiết sản phẩm</h2>
         <a href="TrangChu.html">← Quay lại trang chủ</a>
 
-        <!-- Chi tiết sản phẩm -->
         <section id="productDetail">
             <h2>Đang tải sản phẩm...</h2>
         </section>
         
-        <!-- Đánh giá sản phẩm -->
         <div id="averageRating"><p>Đang tải đánh giá...</p></div>
         <h3>Đánh Giá Từ Người Dùng</h3>
         <div id="reviewList">
             <p>Chưa có đánh giá nào.</p>
         </div>
-        <button id="loadMore" style="display: none;">Xem thêm đánh giá</button>
+        <button id="loadMore" class="hidden">Xem thêm đánh giá</button>
     </div>
-    <!-- Footer từ trang chủ -->
+
     <footer>
         <p>© 2024 Store Computer. Mọi quyền được bảo lưu.</p>
         <div class="social-icons">
@@ -47,6 +45,7 @@
         </div>
     </footer>
     
-    <script src="/Frontend/JS/ChiTietSanPham.js"></script>
+    <!-- Thay thế script cũ bằng module -->
+    <script type="module" src="/Frontend/JS/productDetail.js"></script>
 </body>
 </html>
