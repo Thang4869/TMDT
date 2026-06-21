@@ -1,0 +1,71 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    text-align: left;
+}
+
+h2 {
+    text-align: left;
+}
+
+.back-button {
+    text-decoration: none;
+    font-size: 14px;
+    color: blue;
+    display: block;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 15px;
+    text-align: center;
+}
+
+th {
+    background-color: #f8f8f8;
+}
+
+button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.cart-summary {
+    text-align: right;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+.cart-summary p {
+    margin: 5px 0;
+}
+
+#muaHang {
+    background: blue;
+    color: white;
+    font-size: 16px;
+    padding: 15px 20px;
+    margin-top: 10px;
+}

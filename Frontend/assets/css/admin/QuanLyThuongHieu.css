@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*
+//
+//
+//
+*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    display: flex;
+    height: 100%;
+    transition: background-color 0.3s ease-in-out;
+}
+/*
+//
+//
+//
+*/
+/* Wrapper chứa sidebar và nội dung chính */
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+    /* Cấu hình Sidebar */
+    .sidebar {
+        width: 280px;
+        min-width: 280px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+    }
+    .sidebar .logo {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 30px;
+        color: #ecf0f1;
+    }
+        .sidebar .menu {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            list-style-type: none;
+            width: 100%;
+        }
+        .sidebar .menu li {
+            margin: 15px 0;
+            position: relative;
+        }
+        .sidebar .menu li a {
+            display: flex;
+            align-items: center;
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 12px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+        .sidebar .menu li a:hover,
+        .sidebar .menu li a.active {
+            background-color: #34495e;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .sidebar .menu li a i {
+            margin-right: 10px;
+            transition: transform 0.3s ease;
+        }
+        .sidebar .menu li a:hover i {
+        transform: rotate(360deg);
+        }
+/*
+//
+//
+//
+*/
+/* Main content section */
+.main-content {
+    flex-grow: 1;
+    background-color: #ecf0f1;
+    padding: 20px;
+}
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #bdc3c7;
+    }
+        .header-title {
+            font-size: 28px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .user-menu {
+            position: relative;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+        }
+
+        .user-menu span {
+            margin-right: 10px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .user-menu button {
+            padding: 10px 15px;
+            background-color: #e74c3c;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .user-menu button:hover {
+            background-color: #c0392b;
+            transform: scale(1.05);
+        }
+    .content {
+        padding: 20px;
+        background-color: white;
+        border-radius: 5px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        animation: fadeIn 0.5s ease-out;
+    }
+        .content h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+/*
+//
+//
+//
+*/
+/* Hiệu ứng fade-in */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+/*
+//
+//
+//
+*/
+/* Form styles for adding brand */
+.form-container {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+    .form-container .form-group {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 15px;
+        gap: 20px;
+    }
+    .form-container .form-group label {
+        font-size: 16px;
+        color: #2c3e50;
+        margin-right: 15px;
+    }
+    .form-container .form-group input {
+        width: 65%;
+        padding: 12px;
+        margin: 0;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+    }
+    .form-container button {
+        padding: 12px;
+        background-color: #2ecc71;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        width: 100%;
+        font-size: 18px;
+        transition: background-color 0.3s;
+    }
+    .form-container button:hover {
+        background-color: #27ae60;
+    }
+/*
+//
+//
+//
+*/
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+    text-align: center;
+}
+    table th, table td {
+        padding: 10px;
+        text-align: center;
+        border-bottom: 1px solid #191919;
+        border: 1px solid #191919;
+    }
+    table th {
+        background-color: #34495e;
+        color: white;
+        font-weight: bold;
+    }
+    table td button {
+        margin: 2px;
+        padding: 5px 10px;
+        background-color: #3498db;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+    table td button:hover {
+        background-color: #2980b9;
+    }
+
+        table .btn-delete {
+            background-color: #e74c3c;
+        }
+
+        table .btn-delete:hover {
+            background-color: #c0392b;
+        }
+/*
+//
+//
+//
+*/
+
+
+

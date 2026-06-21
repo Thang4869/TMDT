@@ -1,0 +1,32 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 5px 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:disabled {
+    background-color: gray;
+    cursor: not-allowed;
+}
